@@ -32,12 +32,12 @@ public class MainApplication extends Application {
 
     private static final Logger log = LoggerFactory.getLogger(MainApplication.class);
 
-    private Stage stage;
+    public static Stage stage;
 
     @Override
     public void start(Stage stage) throws Exception {
 
-        this.stage = stage;
+        MainApplication.stage = stage;
         stage.setTitle("JavaFxWebView");
         Pane pane = loadMainPane();
         Scene scene = createScene(pane);
@@ -45,7 +45,7 @@ public class MainApplication extends Application {
         stage.setMaximized(true);
         stage.setWidth(1024);
         stage.setHeight(768);
-        stage.setFullScreen(true);
+        //stage.setFullScreen(true);
         stage.setFullScreenExitHint("Bem Vindo");
         stage.show();
 
